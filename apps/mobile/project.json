@@ -15,8 +15,22 @@
         "polyfills": ["zone.js"],
         "tsConfig": "apps/mobile/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": ["apps/mobile/src/favicon.ico", "apps/mobile/src/assets"],
-        "styles": ["apps/mobile/src/styles.scss"],
+        "assets": [
+          {
+            "glob": "**/*",
+            "input": "src/assets",
+            "output": "assets"
+          },
+          {
+            "glob": "**/*.svg",
+            "input": "node_modules/ionicons/dist/ionicons/svg",
+            "output": "./svg"
+          }
+        ],
+        "styles": [
+          "apps/mobile/src/theme/variables.scss",
+          "apps/mobile/src/global.scss"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -68,7 +82,10 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/mobile/**/*.ts", "apps/mobile/**/*.html"]
+        "lintFilePatterns": [
+          "apps/mobile/**/*.ts",
+          "apps/mobile/**/*.html"
+        ]
       }
     },
     "test": {

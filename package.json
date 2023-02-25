@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "prettier:check": "prettier --check apps/**/**/**/**/**/**/**/**/*.{html,ts,scss}",
-    "prettier:write": "prettier --write apps/**/**/**/**/**/**/**/**/*.{html,ts,scss}"
+    "nx": "npx nx",
+    "format": "npx nx format --libs-and-apps",
+    "prepare": "husky install"
   },
   "private": true,
   "dependencies": {
@@ -16,6 +17,7 @@
     "@angular/platform-browser": "~15.1.0",
     "@angular/platform-browser-dynamic": "~15.1.0",
     "@angular/router": "~15.1.0",
+    "@ionic/angular": "^6.5.6",
     "@nrwl/angular": "15.7.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
@@ -31,6 +33,7 @@
     "@angular/cli": "~15.1.0",
     "@angular/compiler-cli": "~15.1.0",
     "@angular/language-service": "~15.1.0",
+    "@ionic/angular-toolkit": "^6.1.0",
     "@ionic/cli": "^6.20.8",
     "@nrwl/cli": "^15.7.2",
     "@nrwl/cypress": "15.7.2",
@@ -54,6 +57,7 @@
     "prettier": "^2.6.2",
     "ts-jest": "28.0.5",
     "ts-node": "10.9.1",
-    "typescript": "~4.8.2"
+    "typescript": "~4.8.2",
+    "husky": "^8.0.0"
   }
 }
