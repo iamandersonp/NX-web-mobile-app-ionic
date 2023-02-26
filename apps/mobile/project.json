@@ -101,6 +101,28 @@
           "codeCoverage": true
         }
       }
+    },
+    "sync": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx cap sync",
+        "cwd": "apps/mobile"
+      },
+      "configurations": {
+        "ios": { "cmd": "npx cap sync ios" },
+        "android": { "cmd": "npx cap sync android" }
+      }
+    },
+    "add": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx cap add",
+        "cwd": "apps/mobile"
+      },
+      "configurations": {
+        "ios": { "cmd": "npx cap add ios" },
+        "android": { "cmd": "npx cap add android" }
+      }
     }
   },
   "tags": []
